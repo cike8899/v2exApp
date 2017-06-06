@@ -1,0 +1,5 @@
+<!--about.wxml-->
+<view class="container">
+  <picker-view></picker-view>
+  <text>kkkk</text>
+</view>
