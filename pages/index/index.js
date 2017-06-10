@@ -18,6 +18,28 @@ Page({
       url: '../about/about',
     })
   },
+  handleMoveClick(params) {
+    console.info(params);
+    wx.navigateTo({
+      url: '../move/move',
+    })
+  },
+  handleTabViewClick(params) {
+    wx.navigateTo({
+      url: '../scrollableTabView/index',
+    })
+  },
+  handleTextClick(e) {
+    console.info(e);
+    var key = e.currentTarget.dataset.key;
+    var skipTo = "";
+    if (key === "drawer") {
+      skipTo = "/pages/wxDrawer/index";
+    }
+    wx.navigateTo({
+      url: skipTo,
+    })
+  },
   onLoad: function () {
     console.log('onLoad')
     var that = this

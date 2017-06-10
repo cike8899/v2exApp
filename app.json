@@ -2,7 +2,10 @@
   "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/about/about"
+    "pages/about/about",
+    "pages/move/move",
+    "pages/scrollableTabView/index",
+    "pages/wxDrawer/index"
   ],
   "window": {
     "backgroundColor": "light",

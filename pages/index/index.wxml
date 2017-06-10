@@ -10,4 +10,13 @@
   <view class="about-pane" bindtap="handleAboutClick">
     <text class="about-link">{{about}}</text>
   </view>
+  <view class="about-pane" bindtap="handleMoveClick">
+    <text class="about-link">move</text>
+  </view>
+  <view class="about-pane" bindtap="handleTabViewClick">
+    <text class="about-link">tabview</text>
+  </view>
+  <view class="about-pane" data-key="drawer" bindtap="handleTextClick">
+    <text class="about-link">drawer</text>
+  </view>
 </view>
