@@ -5,7 +5,8 @@ Page({
   data: {
     motto: 'Hello World',
     userInfo: {},
-    about: "关于"
+    about: "关于",
+    sideOpen: false
   },
   //事件处理函数
   bindViewTap: function () {
@@ -39,6 +40,11 @@ Page({
     wx.navigateTo({
       url: skipTo,
     })
+  },
+  showSidebar(e) {
+    console.info(e);
+    var open = !this.data.sideOpen;
+    this.setData({ sideOpen: open });
   },
   onLoad: function () {
     console.log('onLoad')

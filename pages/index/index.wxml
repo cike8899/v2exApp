@@ -1,22 +1,42 @@
 <!--index.wxml-->
 <view class="container">
-  <view bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  <view class="sidebar">
+    <view class="wc">
+      <text>第一个item1</text>
+    </view>
+    <view class="wc">
+      <text>第二个item2</text>
+    </view>
+    <view class="wc">
+      <text>第三个item3</text>
+    </view>
+    <view class="wc">
+      <text>第四个item4</text>
+    </view>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="main  {{sideOpen?'side-open':''}}">
+    <view class="side-btn-pane">
+      <span class="iconfont icon-sangeheng" bindtap="showSidebar"></span>
+    </view>
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover" bindtap="bindViewTap"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+    <view class="usermotto">
+      <text class="user-motto">{{motto}}</text>
+    </view>
+    <view class="about-pane" bindtap="handleAboutClick">
+      <text class="about-link">{{about}}</text>
+    </view>
+    <view class="about-pane" bindtap="handleMoveClick">
+      <text class="about-link">move</text>
+    </view>
+    <view class="about-pane" bindtap="handleTabViewClick">
+      <text class="about-link">tabview</text>
+    </view>
+    <view class="about-pane" data-key="drawer" bindtap="handleTextClick">
+      <text class="about-link">drawer</text>
+    </view>
   </view>
-  <view class="about-pane" bindtap="handleAboutClick">
-    <text class="about-link">{{about}}</text>
-  </view>
-  <view class="about-pane" bindtap="handleMoveClick">
-    <text class="about-link">move</text>
-  </view>
-  <view class="about-pane" bindtap="handleTabViewClick">
-    <text class="about-link">tabview</text>
-  </view>
-  <view class="about-pane" data-key="drawer" bindtap="handleTextClick">
-    <text class="about-link">drawer</text>
-  </view>
+
 </view>

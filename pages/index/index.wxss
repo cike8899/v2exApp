@@ -28,3 +28,39 @@
 .about-pane {
   margin-top: 20px;
 }
+
+.side-btn-pane {
+  display: flex;
+  /*justify-content: space-around;*/
+  margin: 10rpx 20rpx;
+}
+
+.icon-sangeheng {
+  font-size: 40rpx;
+  margin: 7px 5px;
+  padding: 0 5rpx;
+}
+
+.sidebar {
+  /*display: none;*/
+  position: fixed;
+  width: 750rpx;
+  /*background-color: rgb(0, 68, 97);*/
+  height: 100%;
+  z-index: 0;
+}
+
+.side-open {
+  transform: rotate(0deg) scale(1) translate(75%, 0%);
+  -webkit-transform: rotate(0deg) scale(1) translate(75%, 0%);
+}
+
+.main {
+  height: 100%;
+  position: fixed;
+  width: 750rpx;
+  background-color: rgb(20, 220, 100);
+  /*z-index: 0;*/
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
