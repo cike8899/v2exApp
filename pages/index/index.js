@@ -6,7 +6,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     about: "关于",
-    sideOpen: false
+    sideOpen: false,
+    sideData: this.buildSideData()
   },
   //事件处理函数
   bindViewTap: function () {
@@ -56,5 +57,13 @@ Page({
         userInfo: userInfo
       })
     })
+  },
+  buildSideData() {
+    return [
+      "浏览",
+      "节点",
+      "设置",
+      "反馈",
+    ]
   }
 })

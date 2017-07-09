@@ -44,10 +44,11 @@
 .sidebar {
   /*display: none;*/
   position: fixed;
-  width: 750rpx;
+  width: 75%;
   /*background-color: rgb(0, 68, 97);*/
   height: 100%;
   z-index: 0;
+  left: 0;
 }
 
 .side-open {
@@ -63,4 +64,9 @@
   /*z-index: 0;*/
   transition: All 0.4s ease;
   -webkit-transition: All 0.4s ease;
+}
+
+.sidebar-line {
+  text-align: center;
+  padding: 50rpx;
 }
