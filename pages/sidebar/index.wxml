@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="side-container">
+  <view class="sidebar {{show?'sidebar-open':'sidebar-close'}}">
+    <view class="side-content">
+      <div wx:for="123456" class="block-text">{{index}}</div>
+    </view>
+    <view class="side-modal" style="{{show?'right:0':''}}" catchtap="hideSidebar"></view>
+  </view>
+  <view class="main">
+    <view class="main-header" catchtap="showSidebar">
+      ...
+    </view>
+    main
+  </view>
+</view>

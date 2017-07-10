@@ -5,7 +5,8 @@
     "pages/about/about",
     "pages/move/move",
     "pages/scrollableTabView/index",
-    "pages/wxDrawer/index"
+    "pages/wxDrawer/index",
+    "pages/sidebar/index"
   ],
   "window": {
     "backgroundColor": "light",

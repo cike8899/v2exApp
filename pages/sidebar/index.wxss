@@ -1,0 +1,57 @@
+/* index.wxss */
+
+.side-container {
+  height: 100vh;
+}
+
+.sidebar {
+  display: inline-block;
+  width: 75%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+.sidebar-open {
+  /*transform: translateX(0);*/
+  transition: left 0.8s ease;
+  left: 0;
+}
+
+.sidebar-close {
+  /*transform: translateX(-200rpx);*/
+  left: -75%;
+  transition: left 0.5s ease;
+}
+
+.side-modal {
+  background: black;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  /*right: 0;*/
+  height: 100vh;
+  /*width: 100vw;*/
+  opacity: 0.5;
+}
+
+.side-content {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: white;
+  height: 100%;
+}
+
+.block-text {
+  display: block;
+  text-align: center;
+}
+
+.main-header {
+  text-align: left;
+  padding-left: 10rpx;
+}
