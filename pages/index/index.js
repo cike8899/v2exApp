@@ -1,5 +1,6 @@
 //index.js
 //获取应用实例
+import api from '../../api/index'
 var app = getApp()
 Page({
   data: {
@@ -20,7 +21,8 @@ Page({
       offset: 0,
       tStart: false
     },
-    activeTab: 0
+    activeTab: 0,
+    list: []
   },
   //事件处理函数
   bindViewTap: function () {
@@ -70,6 +72,14 @@ Page({
   },
   onLoad: function () {
     console.log('onLoad')
+    api.request("topics/latest.json", {}, (data) => {
+      console.info(data);
+      this.setData({
+        list: data
+      });
+    }, (err) => {
+      console.info(err)
+    });
     var that = this
     //调用应用实例的方法获取全局数据
     app.getUserInfo(function (userInfo) {

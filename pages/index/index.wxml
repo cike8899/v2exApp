@@ -49,7 +49,7 @@
           <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" wx:key="unique" class="one-scene">
             <scroll-view style="height:100%" scroll-y>
               <view wx:for="1234567777777" wx:key="unique">
-                <text>这是第{{index+1}}个页面</text>
+                <text wx:for="list" wx:key="index">{{item.content}}</text>
               </view>
             </scroll-view>
           </view>
