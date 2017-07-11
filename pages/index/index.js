@@ -1,6 +1,7 @@
 //index.js
 //获取应用实例
 import api from '../../api/index'
+import wxParse from '../../lib/wxParse/wxParse.js'
 var app = getApp()
 Page({
   data: {
@@ -73,10 +74,13 @@ Page({
   onLoad: function () {
     console.log('onLoad')
     api.request("topics/latest.json", {}, (data) => {
-      console.info(data);
+      data && data.forEach(x => {
+        wxParse.wxParse('content', 'html', x.content, this);
+      });
       this.setData({
         list: data
       });
+      console.info(data);
     }, (err) => {
       console.info(err)
     });
